@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quote Generator</title>
+    <link rel="stylesheet" type="text/css" href="QuoteGenerator.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+         <h1 class="project-name">Quote Generator</h1>
+                 <label for="category">Select a category:</label>
+               <select id="category">
+             <option value="Quran">Quran</option>
+           <option value="Hadith">Hadith</option>
+         </select>
+          <label for="new-quote">Add a new quote:</label>
+            <input type="text" id="new-quote" placeholder="Enter text">
+              <br>
+                <input type="text" id="new-quote-title" placeholder="Enter quote title">
+                 <br>
+                  <div class="buttons">
+                   <button onclick="addQuote()">Add Quote</button>
+                     <button onclick="generateQuote()">Generate Quote</button>
+                      <br>
+                    <div id="quote">
+                  <div id="quote-text"></div>
+                <div id="quote-author"></div>
+             </div>
+           <button id="save-button" onclick="saveQuotes()">Save Quote</button>
+        <button id="show-quotes" class="show-saved-quotes-button" onclick="toggleSavedQuotes()">Show Saved Quotes</button>
+         </div>
+            <div class="saved-quotes">
+               <div id="saved-quotes-container">
+                 <i class="fas fa-trash-alt" id="delete-icon" onclick="deleteQuote(index)"></i>
+              </div>
+           </div>
+         </div>
+        <script src="QuoteGenerator.js"></script>
+     </body>
+</html>
